@@ -1,0 +1,26 @@
+{% extends "global/base.html" %}
+
+{% block content %}
+  <div class="form-wrapper">
+    <h2>Home</h2>
+    
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message {{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <p>
+        Você fez login como {{ user.username }}.
+        Clique <a href="{% url 'authentication:logout' %}">aqui</a>
+        para sair.
+    </p>
+    <p>
+        Atualizar dados de usuário <a href="{% url 'authentication:logout' %}">aqui</a>.
+    </p>
+    
+    
+  </div>
+{% endblock content %}
