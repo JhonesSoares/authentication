@@ -1,19 +1,40 @@
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-    font: normal 15pt Arial;
-    Margin: auto; 
-    background: wheat;    
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  color: var(--clr-black);
+  -webkit-font-smoothing: antialiased;
+  background: wheat;
 }
-header {
-    background: wheat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;    
-}
-h1 {
+
+header h1 {
     text-align: center;
 }
-.form-wrapper {
+section.section_index p {
+  margin: 10px;
+}
+section.section_index .success {
+  font-size: 13px;
+    color: green;
+    list-style: none;
+    text-decoration: none;  
+}
+
+section.section_index .form-wrapper {
     background: rgba(255, 255, 255, 0.842);
     border-radius: 10px;
     padding: 15px;
@@ -23,22 +44,23 @@ h1 {
     text-align: center;
     margin-top: 50px;    
 }
-label {
-    padding: 10px;
+section.section_index label {
+    text-align: left;
     font-size: 20px;
-    margin-right: 10px;
-    width: 150px;
 }
-.form-group {
-    padding: 20px;
+section.section_index .form-group {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+    
 }
-input {
+section.section_index input {
     padding: 10px;
     font-size: 15px;
 }
 
-button{
-    background-color: rgb(0, 70, 199);
+section.section_index button{
+    background-color: rgb(0, 83, 134);
     color: #fff;
     padding: 10px;
     font-size: 18px;
@@ -47,14 +69,14 @@ button{
     border-radius: 10px;
     text-transform: uppercase;  
     margin-right: 10px;
-    width: 150px; 
+     
 }
-button:hover {
-    background-color: rgb(16, 100, 255);
+section.section_index button:hover {
+    background-color: rgb(0, 60, 110);
     transform: scale(1);
 }
 
-.massage, .error, ul{
+section.section_index .massage, .error, section.section_index ul{
     font-size: 13px;
     color: red;
     list-style: none;
@@ -62,9 +84,284 @@ button:hover {
     
 }
 
-.success {
+section.section_index .success {
     font-size: 13px;
     color: green;
     list-style: none;
     text-decoration: none;    
+}
+section.section_index a {
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+section.register .form-wrapper {
+    background: rgba(255, 255, 255, 0.842);
+    border-radius: 10px;
+    padding: 15px;
+    Width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+    text-align: center;
+    margin-top: 30px;
+}
+
+section.register .form-content {
+    margin: 1.5rem 0;
+}
+
+section.register .form-group {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+  }
+
+section.register .form-group p {
+    margin: 1em 0;
+  }
+
+section.register .form-group .help-text, section.register
+.form-group .help-text ~ ul {
+  margin: 0;
+  font-size: 1.2rem;
+  list-style: none;
+  text-align: left;
+}
+
+section.register .form-group input,
+section.register .form-group textarea,
+section.register .form-group select {
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid rgb(0, 83, 134);
+}
+
+section.register .form-group input:focus,
+section.register .form-group textarea:focus,
+section.register .form-group select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgb(0, 83, 134);
+}
+
+section.register .form-group label {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  
+section.register .errorlist {
+    list-style: none;
+    font-size: 1.4rem;
+    color: tomato;
+    text-align: left;
+  }
+
+
+section.register button {
+    background-color: rgb(0, 83, 134);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+section.register button:hover {
+    background-color: rgb(0, 60, 110);
+    transform: scale(1);
+}
+
+
+
+
+
+
+
+section.section_delete .form-wrapper {
+  background: rgba(255, 255, 255, 0.842);
+  border-radius: 10px;
+  padding: 15px;
+  Width: 500px;
+  margin: auto;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+  text-align: center;
+  margin-top: 30px;
+}
+
+section.section_delete .form-content {
+  margin: 1.5rem 0;
+}
+
+section.section_delete .form-group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+}
+
+section.section_delete .form-group p {
+  margin: 1em 0;
+}
+
+section.section_delete .form-group .help-text, section.section_delete
+.form-group .help-text ~ ul {
+margin: 0;
+font-size: 1.2rem;
+list-style: none;
+text-align: left;
+}
+
+section.section_delete .form-group input,
+section.section_delete .form-group textarea,
+section.section_delete .form-group select {
+padding: 1rem;
+border-radius: 4px;
+border: 1px solid rgb(0, 83, 134);
+}
+
+section.section_delete .form-group input:focus,
+section.section_delete .form-group textarea:focus,
+section.section_delete .form-group select:focus {
+outline: none;
+box-shadow: 0 0 5px rgb(0, 83, 134);
+}
+
+section.section_delete .form-group label {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+
+section.section_delete .errorlist {
+  list-style: none;
+  font-size: 1.4rem;
+  color: tomato;
+  text-align: left;
+}
+
+
+section.section_delete button {
+  background-color: rgb(0, 83, 134);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+section.section_delete button:hover {
+  background-color: rgb(0, 60, 110);
+  transform: scale(1);
+}
+
+
+
+
+
+
+
+section.section_update .form-wrapper {
+  background: rgba(255, 255, 255, 0.842);
+  border-radius: 10px;
+  padding: 15px;
+  Width: 500px;
+  margin: auto;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+  text-align: center;
+  margin-top: 30px;
+}
+
+section.section_update .form-content {
+  margin: 1.5rem 0;
+}
+
+section.section_update .form-group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+}
+
+section.section_update .form-group p {
+  margin: 1em 0;
+}
+
+section.section_update .form-group .help-text, section.section_update
+.form-group .help-text ~ ul {
+margin: 0;
+font-size: 1.2rem;
+list-style: none;
+text-align: left;
+}
+
+section.section_update .form-group input,
+section.section_update .form-group textarea,
+section.section_update .form-group select {
+padding: 1rem;
+border-radius: 4px;
+border: 1px solid rgb(0, 83, 134);
+}
+
+section.section_update .form-group input:focus,
+section.section_update .form-group textarea:focus,
+section.section_update .form-group select:focus {
+outline: none;
+box-shadow: 0 0 5px rgb(0, 83, 134);
+}
+
+section.section_update .form-group label {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+
+section.section_update .errorlist {
+  list-style: none;
+  font-size: 1.4rem;
+  color: tomato;
+  text-align: left;
+}
+
+
+section.section_update button {
+  background-color: rgb(0, 83, 134);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+section.section_update button:hover {
+  background-color: rgb(0, 60, 110);
+  transform: scale(1);
+}
+
+
+
+
+section.home .form-wrapper {
+  background: rgba(255, 255, 255, 0.842);
+  border-radius: 10px;
+  padding: 15px;
+  Width: 500px;
+  margin: auto;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+  text-align: center;
+  margin-top: 30px;  
+}
+section.home .success {
+  font-size: 13px;
+  color: green;
+  list-style: none;
+  text-decoration: none;    
 }
